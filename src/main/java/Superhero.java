@@ -72,4 +72,18 @@ public class Superhero {
     public void setStyrke(int styrke) {
         this.styrke = styrke;
     }
+
+    @Override
+    public String toString() {
+        return superHelteNavn +  "\n" + superKraft + "\n" + virkeligeNavn + "\n" + oprindelsesår + "\n" + erMenneske + "\n" + styrke + "\n" + "\n";
+    }
+
+
 }
+
+//public String superHelteNavn;
+//    public String superKraft;
+//    public String virkeligeNavn;
+//    public int oprindelsesår;
+//    public boolean erMenneske;
+//    public double styrke;

@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -11,17 +12,33 @@ public class Main {
    public void startMenu() {
        System.out.println("Velkommen til the SUPERHERO PROGRAM");
        System.out.println("1: Opret ny superhero");
-       System.out.println("9: afslut programet");
+       System.out.println("2: Liste menu");
+       System.out.println("9: Afslut programet");
        int valg = brugerInput.nextInt();
        brugerInput.nextLine();
        if (valg == 1) {
            opretSuperhero();
-       } else if (valg == 9) { System.exit(0);
-
-
        }
+       else if (valg == 9) {
+           System.exit(0);
+       }
+       else if (valg == 2) {
+           listeMenu();
+       }
+
+
+
+
+
+
    }
 
+   public void listeMenu() {
+       System.out.println("liste af superheros");
+       System.out.println();
+
+
+   }
 
    public void opretSuperhero() {
 
@@ -60,7 +77,7 @@ public class Main {
 
            //styrke
            System.out.println("Hvad er din superhelts styrke?");
-           System.out.print("Skriv lige tal mellem 0 og 10000 her: ");
+           System.out.print("Skriv lige tal mellem 1 og 10000 her: ");
            double styrke = brugerInput.nextInt();
 
            database.createSuperhero(superHelteNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
@@ -74,9 +91,23 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Main program = new Main();
-        program.startMenu();
+        //Main program = new Main();
+        //program.startMenu();
 
+        Superhero sup1 = new Superhero("Batman ", "got the bag ", "Bruce Wayne ", 1939, true, 7000);
+        Superhero sup2 = new Superhero("Superman ", "Kan flyve og skyde laser ud af øjene ", "Clark Kent", 1938, false, 9500);
+        Superhero sup3 = new Superhero("Spiderman ", "Er en edderkop ", "Peter Parker ", 1962, true, 6000);
+        Superhero sup4 = new Superhero("Hulk ", "Er på ordenligt meget bamse saft ", "Bruce Banner ", 1962, true, 8500);
+        Superhero sup5 = new Superhero("Thor ", "Har en hammer, der slå fucking hårdt! ", "Thor", 1962, false, 8000);
+
+        Database database = new Database();
+        database.addhero(sup1);
+        database.addhero(sup2);
+        database.addhero(sup3);
+        database.addhero(sup4);
+        database.addhero(sup5);
+
+        System.out.println(database);
 
     }
 

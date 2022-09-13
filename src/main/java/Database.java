@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Database {
 
     // Database klasse med et array til superhelt-objekter
@@ -5,10 +7,28 @@ public class Database {
     // Klassen skal desuden have en metode til at modtage data om en superhelt,
     // så den kan oprette og indsætte et superhelt-objekt i sit array.
 
+    private ArrayList<Superhero> superheroes = new ArrayList<>();
+
 
     //
     public void createSuperhero(String superHeltNavn, String superKraft, String virkeligeNavn,int oprindelsesår,boolean erMenneske, double styrke) {
-        Superhero sup1 = new Superhero(superHeltNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
+        Superhero sup = new Superhero(superHeltNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
+        superheroes.add(sup);
+    }
+
+    public void addhero(Superhero hero) {
+        superheroes.add(hero);
+    }
+
+
+    @Override
+    public String toString() {
+        String heros = "";
+        for (Superhero currentHero: superheroes) {
+            heros += currentHero;
+        }
+        return heros + "\n";
+
     }
 
     //array
