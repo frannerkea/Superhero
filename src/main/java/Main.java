@@ -35,7 +35,14 @@ public class Main {
 
    public void listeMenu() {
        System.out.println("liste af superheros");
-       System.out.println();
+
+
+
+
+       Database database = new Database();
+       System.out.println(database);
+
+
 
 
    }
@@ -82,7 +89,21 @@ public class Main {
 
            database.createSuperhero(superHelteNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
 
-           startMenu();
+       System.out.println("DU har oprettet in superhero. Hvad vil du nu?");
+       System.out.println("1: Opret ny superhero");
+       System.out.println("2: Liste menu");
+       System.out.println("9: Afslut programet");
+       int valg = brugerInput.nextInt();
+       brugerInput.nextLine();
+       if (valg == 1) {
+           opretSuperhero();
+       }
+       else if (valg == 9) {
+           System.exit(0);
+       }
+       else if (valg == 2) {
+           listeMenu();
+       }
 
        }
 
@@ -91,10 +112,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-        //Main program = new Main();
-        //program.startMenu();
+        Main program = new Main();
+        program.startMenu();
 
-        Superhero sup1 = new Superhero("Batman ", "got the bag ", "Bruce Wayne ", 1939, true, 7000);
+        /* Superhero sup1 = new Superhero("Batman ", "got the bag ", "Bruce Wayne ", 1939, true, 7000);
         Superhero sup2 = new Superhero("Superman ", "Kan flyve og skyde laser ud af øjene ", "Clark Kent", 1938, false, 9500);
         Superhero sup3 = new Superhero("Spiderman ", "Er en edderkop ", "Peter Parker ", 1962, true, 6000);
         Superhero sup4 = new Superhero("Hulk ", "Er på ordenligt meget bamse saft ", "Bruce Banner ", 1962, true, 8500);
@@ -109,6 +130,8 @@ public class Main {
 
         System.out.println(database);
 
+
+         */
     }
 
 

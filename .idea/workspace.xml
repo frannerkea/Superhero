@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27c2e0d2-efcb-4676-888e-0e74e42d4077" name="Changes" comment="fixet .next tilbage til nextLine og fixer scanneren">
+    <list default="true" id="27c2e0d2-efcb-4676-888e-0e74e42d4077" name="Changes" comment="skriver liste hardcoded">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Superhero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662988784333</updated>
-      <workItem from="1662988785761" duration="18517000" />
+      <workItem from="1662988785761" duration="19233000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1662988911646</created>
@@ -81,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663056581862</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="skriver liste hardcoded">
+      <created>1663067313295</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663067313295</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +107,18 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="loop der overrider gamle data" />
     <MESSAGE value="fixet .next tilbage til nextLine og fixer scanneren" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixet .next tilbage til nextLine og fixer scanneren" />
+    <MESSAGE value="skriver liste hardcoded" />
+    <option name="LAST_COMMIT_MESSAGE" value="skriver liste hardcoded" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Database.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
