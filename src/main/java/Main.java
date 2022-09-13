@@ -13,9 +13,11 @@ public class Main {
        System.out.println("1: Opret ny superhero");
        System.out.println("9: afslut programet");
        int valg = brugerInput.nextInt();
+       brugerInput.nextLine();
        if (valg == 1) {
            opretSuperhero();
        } else if (valg == 9) { System.exit(0);
+
 
        }
    }
@@ -34,17 +36,17 @@ public class Main {
            //SuperhelteNavn
            System.out.println("Hvad er din superhelts superhelte navn?");
            System.out.print("Skriv det her: ");
-           String superHelteNavn = brugerInput.next();
+           String superHelteNavn = brugerInput.nextLine();
 
            //Superkraft
            System.out.println("hvad er din superhelts superkraf?");
            System.out.print("Skriv det her: ");
-           String superKraft = brugerInput.next();
+           String superKraft = brugerInput.nextLine();
 
            //virkeligeNavn
            System.out.println("hvad er din superhelts virkelige navn?");
            System.out.print("Skriv det her: ");
-           String virkeligeNavn = brugerInput.next();
+           String virkeligeNavn = brugerInput.nextLine();
 
            // oprindelsesår
            System.out.println("Hvad er din superhelts oprindelesår?");
@@ -59,7 +61,7 @@ public class Main {
            //styrke
            System.out.println("Hvad er din superhelts styrke?");
            System.out.print("Skriv lige tal mellem 0 og 10000 her: ");
-           int styrke = brugerInput.nextInt();
+           double styrke = brugerInput.nextInt();
 
            database.createSuperhero(superHelteNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
 

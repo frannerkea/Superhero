@@ -8,10 +8,10 @@ public class Superhero {
     public String virkeligeNavn;
     public int oprindelsesår;
     public boolean erMenneske;
-    public int styrke;
+    public double styrke;
 
     //konstruktør
-    public Superhero(String superHelteNavn, String superKraft, String virkeligeNavn, int oprindelsesår, boolean erMenneske, int styrke) {
+    public Superhero(String superHelteNavn, String superKraft, String virkeligeNavn, int oprindelsesår, boolean erMenneske, double styrke) {
         this.superHelteNavn = superHelteNavn;
         this.superKraft = superKraft;
         this.virkeligeNavn = virkeligeNavn;
@@ -42,7 +42,7 @@ public class Superhero {
         return erMenneske;
     }
 
-    public int getStyrke() {
+    public double getStyrke() {
         return styrke;
     }
 

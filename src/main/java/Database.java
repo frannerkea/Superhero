@@ -7,7 +7,7 @@ public class Database {
 
 
     //
-    public void createSuperhero(String superHeltNavn, String superKraft, String virkeligeNavn,int oprindelsesår,boolean erMenneske, int styrke) {
+    public void createSuperhero(String superHeltNavn, String superKraft, String virkeligeNavn,int oprindelsesår,boolean erMenneske, double styrke) {
         Superhero sup1 = new Superhero(superHeltNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
     }
 
