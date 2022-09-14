@@ -16,6 +16,7 @@ public class Main {
             System.out.println("Velkommen til the SUPERHERO PROGRAM");
             System.out.println("1: Opret ny superhero");
             System.out.println("2: Liste menu");
+            System.out.println("3: søg efter superhelt by name");
             System.out.println("9: Afslut programet");
             valg = brugerInput.nextInt();
             brugerInput.nextLine();
@@ -25,6 +26,8 @@ public class Main {
                 System.exit(0);
             } else if (valg == 2) {
                 listeMenu();
+            } else if (valg == 3) {
+                søgeEfterHelt();
             }
         } while (valg != 9);
 
@@ -83,6 +86,13 @@ public class Main {
 
     }
 
+    public void søgeEfterHelt() {
+        System.out.println("Søg efter din superhelts navn:");
+        String searchTerm = brugerInput.nextLine();
+        Superhero superhero = database.searchFor(searchTerm);
+        System.out.println(superhero);
+
+    }
 
     public static void main(String[] args) {
         Main program = new Main();
