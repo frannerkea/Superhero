@@ -7,11 +7,11 @@ public class Superhero {
     public String superKraft;
     public String virkeligeNavn;
     public int oprindelsesår;
-    public boolean erMenneske;
+    public String erMenneske;
     public double styrke;
 
     //konstruktør
-    public Superhero(String superHelteNavn, String superKraft, String virkeligeNavn, int oprindelsesår, boolean erMenneske, double styrke) {
+    public Superhero(String superHelteNavn, String superKraft, String virkeligeNavn, int oprindelsesår, String erMenneske, double styrke) {
         this.superHelteNavn = superHelteNavn;
         this.superKraft = superKraft;
         this.virkeligeNavn = virkeligeNavn;
@@ -38,7 +38,7 @@ public class Superhero {
         return oprindelsesår;
     }
 
-    public boolean isErMenneske() {
+    public String getErMenneske() {
         return erMenneske;
     }
 
@@ -65,7 +65,7 @@ public class Superhero {
         this.oprindelsesår = oprindelsesår;
     }
 
-    public void setErMenneske(boolean erMenneske) {
+    public void setErMenneske(String erMenneske) {
         this.erMenneske = erMenneske;
     }
 

@@ -8,6 +8,7 @@ public class Main {
     //FÅ BRUGER IMPUT
     Scanner brugerInput = new Scanner(System.in);
     int valg;
+    Database database = new Database();
 
    public void startMenu() {
        System.out.println("Velkommen til the SUPERHERO PROGRAM");
@@ -35,15 +36,9 @@ public class Main {
 
    public void listeMenu() {
        System.out.println("liste af superheros");
-
-
-
-
-       Database database = new Database();
-       System.out.println(database);
-
-
-
+        for (Superhero helt : database.getSuperheroes() ) {
+            System.out.println(helt.getSuperHelteNavn() + helt.getSuperKraft() + helt.getVirkeligeNavn() +  helt.getOprindelsesår()  + helt.getErMenneske() + helt.getStyrke() + " " );
+        }
 
    }
 
@@ -76,11 +71,12 @@ public class Main {
            System.out.println("Hvad er din superhelts oprindelesår?");
            System.out.print("Skriv det her: ");
            int oprindelsesår = brugerInput.nextInt();
+           brugerInput.nextLine();
 
            // erMenneske
-           System.out.println("Er din superhelt menneske? true eller false");
-           System.out.print("skriv true eller falsh ");
-           boolean erMenneske = brugerInput.nextBoolean();
+           System.out.println("Er din superhelt menneske? ja eller nej");
+           System.out.println("skriv ja eller nej ");
+           String erMenneske = brugerInput.nextLine();
 
            //styrke
            System.out.println("Hvad er din superhelts styrke?");

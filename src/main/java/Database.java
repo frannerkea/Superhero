@@ -11,17 +11,18 @@ public class Database {
 
 
     //
-    public void createSuperhero(String superHeltNavn, String superKraft, String virkeligeNavn,int oprindelsesår,boolean erMenneske, double styrke) {
-        Superhero sup = new Superhero(superHeltNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
-        superheroes.add(sup);
+    public void createSuperhero(String superHeltNavn, String superKraft, String virkeligeNavn,int oprindelsesår,String erMenneske, double styrke) {
+        Superhero sups = new Superhero(superHeltNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
+        superheroes.add(sups);
     }
 
-    public void addhero(Superhero hero) {
-        superheroes.add(hero);
+    public ArrayList<Superhero> getSuperheroes() {
+        return superheroes;
     }
 
 
-    @Override
+
+   /* @Override
     public String toString() {
         String heros = "";
         for (Superhero currentHero: superheroes) {
@@ -30,6 +31,8 @@ public class Database {
         return heros + "\n";
 
     }
+    */
+
 
     //array
     /*
