@@ -33,8 +33,10 @@ public class Main {
 
     public void listeMenu() {
         System.out.println("liste af superheros");
+        //loop der går igennem array
         for (Superhero helt : database.getSuperheroes()) {
-            System.out.println(helt.getSuperHelteNavn() + helt.getSuperKraft() + helt.getVirkeligeNavn() + helt.getOprindelsesår() + helt.getErMenneske() + helt.getStyrke() + " ");
+            System.out.println(helt.getSuperHelteNavn() + "\n" + helt.getSuperKraft() + "\n" + helt.getVirkeligeNavn()
+                    + "\n" + helt.getOprindelsesår() + "\n"  + helt.getErMenneske() + "\n"  + helt.getStyrke() + "\n"  + " ");
         }
 
     }
