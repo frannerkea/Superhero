@@ -91,7 +91,11 @@ public class Main {
         String searchTerm = brugerInput.nextLine();
         Superhero superhero = database.searchFor(searchTerm);
         System.out.println(superhero);
-
+        if (superhero != null) {
+            System.out.println("Superhelt infomation" + "\n" + superhero);
+        } else {
+            System.out.println("kunne ikke finde superhero med det navn, dsv.!");
+        }
     }
 
     public static void main(String[] args) {

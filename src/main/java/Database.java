@@ -14,7 +14,7 @@ public class Database {
     public void createSuperhero(String superHeltNavn, String superKraft, String virkeligeNavn, int oprindelsesår, String erMenneske, double styrke) {
         Superhero sups = new Superhero(superHeltNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
         // test superhelte
-        Superhero sup2 = new Superhero("Superman ", "Kan flyve og skyde laser ud af øjene ", "Clark Kent", 1938, "Yes", 9500);
+        Superhero sup2 = new Superhero("Superman", "Kan flyve og skyde laser ud af øjene ", "Clark Kent", 1938, "Yes", 9500);
 
         superheroes.add(sups);
         superheroes.add(sup2);
@@ -25,13 +25,15 @@ public class Database {
         return superheroes;
     }
 
+    //find bestemt superhero
     public Superhero searchFor(String searchTerm) {
         for (Superhero helt : superheroes) {
             if (helt.getSuperHelteNavn().toLowerCase().contains(searchTerm.toLowerCase())) {
-                return helt;
+                return helt;        // hvis fundet
             }
 
         }
+        //hvis ikke fundet
         return null;
     }
 
