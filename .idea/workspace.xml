@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27c2e0d2-efcb-4676-888e-0e74e42d4077" name="Changes" comment="delopgave 4 - ny klasse Userinterface">
+    <list default="true" id="27c2e0d2-efcb-4676-888e-0e74e42d4077" name="Changes" comment="delopgave 4 - ny klasse Userinterface - superhelt søgning fixet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Userinterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
       <updated>1662988784333</updated>
       <workItem from="1662988785761" duration="33885000" />
       <workItem from="1663584423982" duration="439000" />
-      <workItem from="1663585362588" duration="4648000" />
+      <workItem from="1663585362588" duration="6963000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1662988911646</created>
@@ -149,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663230596897</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="delopgave 4 - ny klasse Userinterface - superhelt søgning fixet">
+      <created>1663669996161</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663669996161</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +182,7 @@
     <MESSAGE value="deleopgave 3" />
     <MESSAGE value="deleopgave 3 med bedre søgning der virker bedre" />
     <MESSAGE value="delopgave 4 - ny klasse Userinterface" />
-    <option name="LAST_COMMIT_MESSAGE" value="delopgave 4 - ny klasse Userinterface" />
+    <MESSAGE value="delopgave 4 - ny klasse Userinterface - superhelt søgning fixet" />
+    <option name="LAST_COMMIT_MESSAGE" value="delopgave 4 - ny klasse Userinterface - superhelt søgning fixet" />
   </component>
 </project>
