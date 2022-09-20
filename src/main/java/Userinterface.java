@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Userinterface {
@@ -27,6 +28,8 @@ public class Userinterface {
                 listeMenu();
             } else if (valg == 3) {
                 søgeEfterHelt();
+            } else if (valg == 4) {
+                redigerHelt();
             }
         } while (valg != 9);
 
@@ -86,17 +89,39 @@ public class Userinterface {
     }
 
     public void søgeEfterHelt() {
+        String searchTerm = null;
+        ArrayList<Superhero> searchResults = database.searchFor(searchTerm);
         System.out.println("Søg efter din superhelts navn:");
-        String searchTerm = brugerInput.nextLine();
-        Superhero superhero = database.searchFor(searchTerm);
-        System.out.println(superhero);
-        if (superhero != null) {
-            System.out.println("Superhelt infomation" + "\n" + superhero);
+        searchTerm = brugerInput.nextLine();
+
+        if(searchResults.isEmpty()) {
+            System.out.println("Der var ingen superhelt med dette navn");
+        } else if(searchResults.size() == 1) {
+            System.out.println("En enkle superhelt var fundet");
+            Superhero hero = searchResults.get(0);
+            System.out.println("Superhero navn: " + hero.getSuperHelteNavn());
+            System.out.println("Superkraft:  " + hero.getSuperKraft());
+            System.out.println("Er menneske:  " +  hero.getErMenneske());
+            System.out.println("Oprindelesår år:  " + hero.getOprindelsesår());
+            System.out.println("StyrkePoint:  " + hero.getStyrke());
+            System.out.println("\n");
         } else {
-            System.out.println("kunne ikke finde superhero med det navn, dsv.!");
+            System.out.println("Flere superhelte var fundet");
+            for(Superhero hero : searchResults) {
+                System.out.println("Superhero navn: " + hero.getSuperHelteNavn());
+                System.out.println("Superkraft:  " + hero.getSuperKraft());
+                System.out.println("Er menneske:  " +  hero.getErMenneske());
+                System.out.println("Oprindelesår år:  " + hero.getOprindelsesår());
+                System.out.println("StyrkePoint:  " + hero.getStyrke());
+                System.out.println("\n");
+            }
         }
     }
 
+    public void redigerHelt() {
+        System.out.println("Rediger din superhero");
+
+    }
 
 
 }
