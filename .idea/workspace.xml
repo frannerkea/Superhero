@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27c2e0d2-efcb-4676-888e-0e74e42d4077" name="Changes" comment="delopgave 4 - ny klasse Userinterface - superhelt søgning fixet">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="27c2e0d2-efcb-4676-888e-0e74e42d4077" name="Changes" comment="delopgave 4 - ny klasse Userinterface - superhelt søgning fixet" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +66,7 @@
       <updated>1662988784333</updated>
       <workItem from="1662988785761" duration="33885000" />
       <workItem from="1663584423982" duration="439000" />
-      <workItem from="1663585362588" duration="6963000" />
+      <workItem from="1663585362588" duration="7442000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1662988911646</created>
@@ -154,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663669996161</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="delopgave 4 - ny klasse Userinterface - superhelt søgning fixet">
+      <created>1663671580185</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663671580185</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
