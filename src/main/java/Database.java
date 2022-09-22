@@ -13,19 +13,20 @@ public class Database {
     //
     public void createSuperhero(String superHeltNavn, String superKraft, String virkeligeNavn, int oprindelsesår, String erMenneske, double styrke) {
         Superhero sups = new Superhero(superHeltNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
-
-        // test superhelte
-        Superhero sup2 = new Superhero("Superman", "Kan flyve og skyde laser ud af øjene ", "Clark Kent", 1938, "Yes", 9500);
-        Superhero sup3 = new Superhero("Batman", "rig", "Bruce Wayne", 1939, "No", 6000);
-
-
-        superheroes.add(sups);
-        superheroes.add(sup2);
-        superheroes.add(sup3);
-
     }
 
-    public ArrayList<Superhero> getSuperheroes() {
+        // test superhelte
+        public void createTestData() {
+            Superhero sup2 = new Superhero("Superman", "Kan flyve og skyde laser ud af øjene ", "Clark Kent", 1938, "No", 9500);
+            Superhero sup3 = new Superhero("Batman", "rig", "Bruce Wayne", 1939, "Yes", 6000);
+
+            superheroes.add(sup2);
+            superheroes.add(sup3);
+
+        }
+
+
+    public ArrayList<Superhero> getSuperHeroDatabase() {
         return superheroes;
     }
 
@@ -42,6 +43,8 @@ public class Database {
         //hvis ikke fundet
         return searchResults;
     }
+
+
 
 
 

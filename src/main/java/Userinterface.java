@@ -11,12 +11,14 @@ public class Userinterface {
     Database database = new Database();
 
     public void startMenu() {
+        database.createTestData();
         int valg;
         do {
             System.out.println("Velkommen til the SUPERHERO PROGRAM");
             System.out.println("1: Opret ny superhero");
             System.out.println("2: Liste menu");
-            System.out.println("3: søg efter superhelt by name");
+            System.out.println("3: Søg efter superhelt by name");
+            System.out.println("4: Rediger en helt");
             System.out.println("9: Afslut programet");
             valg = brugerInput.nextInt();
             brugerInput.nextLine();
@@ -39,7 +41,7 @@ public class Userinterface {
     public void listeMenu() {
         System.out.println("liste af superheros");
         //loop der går igennem array
-        for (Superhero helt : database.getSuperheroes()) {
+        for (Superhero helt : database.getSuperHeroDatabase()) {
             System.out.println(helt.getSuperHelteNavn() + "\n" + helt.getSuperKraft() + "\n" + helt.getVirkeligeNavn()
                     + "\n" + helt.getOprindelsesår() + "\n"  + helt.getErMenneske() + "\n"  + helt.getStyrke() + "\n"  + " ");
         }
@@ -119,9 +121,99 @@ public class Userinterface {
     }
 
     public void redigerHelt() {
+        //boolean der checker for bruger imput fejl
+        boolean writingError =  false;
+
         System.out.println("Rediger din superhero");
+        //giver hver superhero et nummer så man kan vælge superhelten
+        for (int i = 0; i <database.getSuperHeroDatabase().size(); i++) {
+            System.out.println(i + 1 + ": " + database.getSuperHeroDatabase().get(i));
+        }
+
+        System.out.println("Vælg nummer for den superhero du vil rediger");
+        //gør så brugen kan vælge helt
+        int number = brugerInput.nextInt();
+        brugerInput.nextLine();
+
+        //tager den valgt superhelt af bruger minus 1 fordi array starter på 0
+        Superhero redigerHelt = database.getSuperHeroDatabase().get(number - 1);
+        System.out.println("Rediger superhero's info: " + redigerHelt);
+
+        //info til brugeren         Er lidt itivle om
+        System.out.println("Rediger data tryk og ENTER. Hvis du ikke vil rediger data bare tryk Enter ");
+        System.out.println("Name: " + redigerHelt.getSuperHelteNavn());
+        // todo: hvad gør trim? sletter det gamle navn?
+        String newSuperHelteNavn = brugerInput.nextLine().trim();
+        //if statement der sætter ny navn
+        // todo: hvad gør ! helst presist?
+        if (!newSuperHelteNavn.isEmpty())
+            redigerHelt.setSuperHelteNavn(newSuperHelteNavn);
+
+        //superkraft
+        System.out.println("SuperKraft: " + redigerHelt.getSuperKraft());
+        String newSuperKraft = brugerInput.nextLine().trim();
+        if (!newSuperHelteNavn.isEmpty())
+            redigerHelt.setSuperHelteNavn(newSuperKraft);
+
+        //Virkelignavn
+        System.out.println("Virkeligenavn: " + redigerHelt.getVirkeligeNavn());
+        String newVirkeligeNavn = brugerInput.nextLine().trim();
+        if (!newVirkeligeNavn.isEmpty())
+            redigerHelt.setVirkeligeNavn(newVirkeligeNavn);
+
+        //Oprindelses år:
+        System.out.println("Oprindelses år: " + redigerHelt.getOprindelsesår());
+        do {
+            String newOprindelsesår = brugerInput.nextLine().trim();
+            if (!newOprindelsesår.isEmpty()) {
+                try {
+                    redigerHelt.setOprindelsesår(Integer.parseInt(newOprindelsesår));
+                    writingError = false;
+                } catch (NumberFormatException nfe) {  // catch for hvis bruger skriver andet end tal
+                    System.out.println("En fejl op stod");
+                    System.out.println("Skriv oprindelsesår i tal");
+                    writingError = true;
+                }
+
+            }
+        } while (writingError == true); //todo lidt i tivle hvad den gør
+
+
+        //ErMenneske
+        System.out.println("Er menneske: " + redigerHelt.getErMenneske());
+        String newErMenneske = brugerInput.nextLine().trim();
+        if (!newErMenneske.isEmpty())
+            redigerHelt.setErMenneske(newErMenneske);
+
+        //styrke
+        System.out.println("Styrke: " + redigerHelt.getStyrke());
+        do {
+            String newStyrke = brugerInput.nextLine().trim();
+            if (!newStyrke.isEmpty()) {
+                try {
+                    redigerHelt.setStyrke(Integer.parseInt(newStyrke));
+                    writingError = false;
+                } catch (NumberFormatException nfe) { // catch for hvis bruger skriver andet end tal
+                    System.out.println("En fejl op stod");
+                    System.out.println("Skriv oprindelsesår i tal");
+                    writingError = true;
+                }
+
+            }
+        } while (writingError == true);
+
 
     }
 
 
 }
+
+
+
+
+
+
+
+
+
+
