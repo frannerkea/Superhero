@@ -91,6 +91,7 @@ public class Userinterface {
     }
 
     public void søgeEfterHelt() {
+        //todo fix so den ikke crasher by default
         String searchTerm = null;
         ArrayList<Superhero> searchResults = database.searchFor(searchTerm);
         System.out.println("Søg efter din superhelts navn:");
