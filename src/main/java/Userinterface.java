@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,10 +9,11 @@ public class Userinterface {
     //FÅ BRUGER IMPUT
     Scanner brugerInput = new Scanner(System.in);
     int valg;
-    Database database = new Database();
+    //Database database = new Database();
+    Controller controller = new Controller();
 
-    public void startMenu() {
-        database.createTestData();
+    public void startMenu() throws FileNotFoundException {
+        //Controller.createTestData();
         int valg;
         do {
             System.out.println("Velkommen til the SUPERHERO PROGRAM");
@@ -19,6 +21,7 @@ public class Userinterface {
             System.out.println("2: Liste menu");
             System.out.println("3: Søg efter superhelt by name");
             System.out.println("4: Rediger en helt");
+            System.out.println("5: Gem list på en fil");
             System.out.println("9: Afslut programet");
             valg = brugerInput.nextInt();
             brugerInput.nextLine();
@@ -32,6 +35,8 @@ public class Userinterface {
                 søgeEfterHelt();
             } else if (valg == 4) {
                 redigerHelt();
+            } else if (valg == 5) {
+                controller.saveData();
             }
         } while (valg != 9);
 
@@ -41,7 +46,7 @@ public class Userinterface {
     public void listeMenu() {
         System.out.println("liste af superheros");
         //loop der går igennem array
-        for (Superhero helt : database.getSuperHeroDatabase()) {
+        for (Superhero helt : controller.getSuperHeroDatabase()) {
             System.out.println(helt.getSuperHelteNavn() + "\n" + helt.getSuperKraft() + "\n" + helt.getVirkeligeNavn()
                     + "\n" + helt.getOprindelsesår() + "\n"  + helt.getErMenneske() + "\n"  + helt.getStyrke() + "\n"  + " ");
         }
@@ -85,7 +90,7 @@ public class Userinterface {
         System.out.print("Skriv lige tal mellem 1 og 10000 her: ");
         double styrke = brugerInput.nextInt();
 
-        database.createSuperhero(superHelteNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
+        controller.createSuperhero(superHelteNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
 
 
     }
@@ -93,7 +98,7 @@ public class Userinterface {
     public void søgeEfterHelt() {
         //todo fix so den ikke crasher by default
         String searchTerm = null;
-        ArrayList<Superhero> searchResults = database.searchFor(searchTerm);
+        ArrayList<Superhero> searchResults = controller.searchFor(searchTerm);
         System.out.println("Søg efter din superhelts navn:");
         searchTerm = brugerInput.nextLine();
 
@@ -127,8 +132,8 @@ public class Userinterface {
 
         System.out.println("Rediger din superhero");
         //giver hver superhero et nummer så man kan vælge superhelten
-        for (int i = 0; i <database.getSuperHeroDatabase().size(); i++) {
-            System.out.println(i + 1 + ": " + database.getSuperHeroDatabase().get(i));
+        for (int i = 0; i <controller.getSuperHeroDatabase().size(); i++) {
+            System.out.println(i + 1 + ": " + controller.getSuperHeroDatabase().get(i));
         }
 
         System.out.println("Vælg nummer for den superhero du vil rediger");
@@ -137,7 +142,7 @@ public class Userinterface {
         brugerInput.nextLine();
 
         //tager den valgt superhelt af bruger minus 1 fordi array starter på 0
-        Superhero redigerHelt = database.getSuperHeroDatabase().get(number - 1);
+        Superhero redigerHelt = controller.getSuperHeroDatabase().get(number - 1);
         System.out.println("Rediger superhero's info: " + redigerHelt);
 
         //info til brugeren         Er lidt itivle om

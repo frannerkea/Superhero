@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27c2e0d2-efcb-4676-888e-0e74e42d4077" name="Changes" comment="Delopgave 4 udført helt">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Userinterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Userinterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +54,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="start program" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -71,6 +80,7 @@
       <workItem from="1663584423982" duration="439000" />
       <workItem from="1663585362588" duration="9403000" />
       <workItem from="1663832368519" duration="4910000" />
+      <workItem from="1667377057548" duration="2812000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1662988911646</created>

@@ -13,9 +13,10 @@ public class Database {
     //
     public void createSuperhero(String superHeltNavn, String superKraft, String virkeligeNavn, int oprindelsesår, String erMenneske, double styrke) {
         Superhero sups = new Superhero(superHeltNavn, superKraft, virkeligeNavn, oprindelsesår, erMenneske, styrke);
+        superheroes.add(sups);
     }
 
-        // test superhelte
+        /* test superhelte
         public void createTestData() {
             Superhero sup2 = new Superhero("Superman", "Kan flyve og skyde laser ud af øjene ", "Clark Kent", 1938, "No", 9500);
             Superhero sup3 = new Superhero("Batman", "rig", "Bruce Wayne", 1939, "Yes", 6000);
@@ -25,6 +26,8 @@ public class Database {
 
         }
 
+
+         */
 
     public ArrayList<Superhero> getSuperHeroDatabase() {
         return superheroes;
